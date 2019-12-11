@@ -3,7 +3,7 @@
 <section class="page-wrap">
     <div class="container">
 
-        <h1 class="mb-4 text-center"><?php echo single_cat_title(); ?></h1>
+        <h1 class="mb-4 text-center"><?php //echo single_cat_title(); ?>CARS FOR SALE</h1>
 
         <?php
         get_template_part('inc/section', 'archive');

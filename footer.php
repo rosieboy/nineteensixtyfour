@@ -1,5 +1,5 @@
 </main>
-<footer class="bg-info text-white">
+<footer class="text-white">
 
 <div class="container">
     <?php wp_nav_menu(

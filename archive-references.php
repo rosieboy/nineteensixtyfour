@@ -1,8 +1,10 @@
 <!-- Wordpress Template Hierarchy example. 
-Having a "blog" category defined, wp will 
+Having a "references" category defined, wp will 
 automatically use this template to present the archive -->
 
 <?php get_header(); ?>
+
+ARCHIVE-REFERENCES
 
 <section class="page-wrap">
     <div class="container">
@@ -21,7 +23,7 @@ automatically use this template to present the archive -->
 
                 <?php
 
-                get_template_part('inc/section', 'archive');
+                get_template_part('inc/section', 'references');
 
                 // Simple next and previous navigation between posts 
                 previous_posts_link();

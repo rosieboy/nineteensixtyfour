@@ -19,50 +19,38 @@
 </head>
 
 <body>
-
     <header>
-        BRYT HÄR
-        <div class="container-fluid">
-            <div class="row justify-content-between bg-info">
-                <div class="col-6">
-                    <a class="text-white display-3" href="/">Ziqzaq Code</a>
-                </div>
-                <div class="col-6 text-right">
-                    <div class="container clearfix mt-2">
-                        <?php get_search_form() ?>
-                    </div>
-                </div>
+         <div class="row shadow">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light bg-white">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location'  => 'primary',
+                            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                            'container'       => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id'    => 'navbarSupportedContent',
+                            'menu_class'      => 'navbar-nav mr-auto',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'          => new WP_Bootstrap_Navwalker(),
+                        )
+                    );
+                    ?>
+                </nav>
             </div>
-            <div class="row d-flex justify-content-end bg-secondary">
-                <div class="mr-4">
-                    <!-- https://github.com/wp-bootstrap/wp-bootstrap-navwalker -->
-                    <nav class="navbar navbar-expand-sm navbar-dark" role="navigation">
-                        <div class="container">
+            <div class="col text-left">
+                <a class="" href="/"><img src="/wp-content/themes/nineteensixtyfour/images/Tallbergs-VVS-cropped.jpg" class="float-right mt-3 mr-sm-3"/></a>
+            </div>
+         </div>
 
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">Navbar</a>
-                            <?php wp_nav_menu(
-                                array(
-                                    'theme_location'  => 'primary',
-                                    'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
-                                    'container'       => 'div',
-                                    'container_class' => 'collapse navbar-collapse text-white',
-                                    'container_id'    => 'bs-example-navbar-collapse-1',
-                                    'menu_class'      => 'navbar-nav mr-auto',
-                                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                    'walker'          => new WP_Bootstrap_Navwalker(),
-                                )
-                            );
-                            ?>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
+         <!--
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+        -->
     </header>
-
-    <main>
-        <!-- <main class="flex-1 mx-4 md:mx-8 lg:mx-12 mt-4"> -->
+    <main> 
